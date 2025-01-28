@@ -22,7 +22,7 @@
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&label=claudemods&color=A836FF&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/claudemods)</div>
 
 <div align="center">
-claudemods Arch Package Utility v1.0 27-01-2025
+claudemods Arch Package Utility v1.0 28-01-2025
 
 ![2025-01-28-103653_hyprshot](https://github.com/user-attachments/assets/4954ca1a-445a-4840-afb9-81d2340c46b6)
 
