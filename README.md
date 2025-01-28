@@ -42,24 +42,10 @@ Arch Package Utility v1.0 28-01-2025:
 
 </div>
 1 Download and store pkg.tar.zst
-
-
-</div>
 2 Download and install packages
-</div>
-
-
-</div>
 3 Only store package name in log
-
-</div>
-</div>
 4 Install packages from log
-
-</div>
 5 Update Packages And Or Clear Packages
-
-</div>
 6 Open Logs
 
 ![2025-01-28-103653_hyprshot](https://github.com/user-attachments/assets/4954ca1a-445a-4840-afb9-81d2340c46b6)
