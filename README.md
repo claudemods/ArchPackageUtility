@@ -40,13 +40,12 @@ select a option from the menu
 
 Arch Package Utility v1.0 28-01-2025:
 
-</div>
-1 Download and store pkg.tar.zst
-2 Download and install packages
-3 Only store package name in log
-4 Install packages from log
-5 Update Packages And Or Clear Packages
-6 Open Logs
+1. Download and store pkg.tar.zst
+2. Download and install packages
+3. Only store package name in log
+4. Install packages from log
+5. Update Packages And Or Clear Packages
+6. Open Logs
 
 ![2025-01-28-103653_hyprshot](https://github.com/user-attachments/assets/4954ca1a-445a-4840-afb9-81d2340c46b6)
 
