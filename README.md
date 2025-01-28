@@ -24,6 +24,7 @@
 <div align="center">
 claudemods Arch Package Utility v1.0 27-01-2025
 
+![2025-01-28-103653_hyprshot](https://github.com/user-attachments/assets/4954ca1a-445a-4840-afb9-81d2340c46b6)
 
 ![2025-01-27-222428_hyprshot](https://github.com/user-attachments/assets/02aba372-f067-4011-ab26-4f3c32a0e876)
 ![2025-01-27-223043_hyprshot](https://github.com/user-attachments/assets/d63cc48e-d03c-48ba-a17f-b669f28559fb)
