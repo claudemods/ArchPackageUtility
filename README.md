@@ -6,7 +6,7 @@
 
   <a href="https://www.linux.org" target="_blank"><img src="https://img.shields.io/badge/OS-Linux-e06c75?style=for-the-badge&logo=linux" /></a>
            <a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Arch-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
-    <a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/BuildWith-DeepSeel-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
+    <a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/BuildWith-DeepSeek-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
 <div align="center">
 
 ## [ Support Me ](https://www.paypal.com/paypalme/claudemods?country.x=GB&locale)
