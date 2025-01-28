@@ -39,14 +39,20 @@ select a option from the menu
 3. Exit
 
 Arch Package Utility v1.0 28-01-2025:
+
+</div>
 1 Download and store pkg.tar.zst
+
 
 </div>
 2 Download and install packages
+</div>
+
 
 </div>
 3 Only store package name in log
 
+</div>
 </div>
 4 Install packages from log
 
