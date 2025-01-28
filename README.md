@@ -22,7 +22,29 @@
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&label=claudemods&color=A836FF&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/claudemods)</div>
 
 <div align="center">
-claudemods Arch Package Utility v1.0 28-01-2025
+claudemods Arch Package Utility v1.0 Build 28-01-2025
+
+known issues
+text at bottom of konsole
+
+News v1.01
+due to DeepSeek problems im having trouble updating my code for things
+i will try to fix text error
+i will be looking at extra features for now everything is a base
+
+select a option from the menu
+
+1. Arch Package Utility v1.0 28-01-2025
+2. claudemods Arch Mirror Changer v1.03
+3. Exit
+
+Arch Package Utility v1.0 28-01-2025:
+1 Download and store pkg.tar.zst
+2 Download and install packages
+3 Only store package name in log
+4 Install packages from log
+5 Update Packages And Or Clear Packages
+6 Open Logs
 
 ![2025-01-28-103653_hyprshot](https://github.com/user-attachments/assets/4954ca1a-445a-4840-afb9-81d2340c46b6)
 
