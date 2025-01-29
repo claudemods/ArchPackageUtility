@@ -14,7 +14,7 @@
 
 <div align="center">
 
-[![Version](https://img.shields.io/github/v/release/claudemods/ArchPackageUtility/?color=FFD700&label=Latest%20Release&style=for-the-badge)](https://github.com/claudemods/ArchPackageUtility/releases/tag/v1.06.1-build-26-01-2025)
+[![Version](https://img.shields.io/github/v/release/claudemods/ArchPackageUtility?color=FFD700&label=Latest%20Release&style=for-the-badge)](https://github.com/claudemods/ArchPackageUtility/releases/tag/v1.0)
 
 <div align="center">
 
