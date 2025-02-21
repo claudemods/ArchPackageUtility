@@ -28,7 +28,7 @@
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&label=claudemods&color=A836FF&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/claudemods)</div>
 
 <div align="center">
-claudemods Arch Package Utility v1.0 Build 28-01-2025
+
 
 known issues
 text at bottom of konsole
@@ -40,10 +40,8 @@ i will be looking at extra features for now everything is a base
 
 select a option from the menu
 
-1. Arch Package Utility v1.0 20-02-2025
-
-
-Arch Package Utility v1.0 20-02-2025:
+<div align="center">
+changelog Arch Package Utility v1.0 20-02-2025
 <div align="center">
 1. Download and store .pkg.tar.zst packages.
     <div align="center">
