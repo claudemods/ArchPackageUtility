@@ -37,14 +37,17 @@ News v1.01
 due to DeepSeek problems im having trouble updating my code for things
 i will be looking at extra features for now everything is a base
 
-select a option from the menu
+
 
 <div align="center">
 changelog on the releases
+      <div align="center">
     <div align="center">
     Arch Package Utility v1.0 20-02-2025
 <div align="center">
-1. Download and store .pkg.tar.zst packages.
+    select a option from the menu
+      <div align="center">
+   1. Download and store .pkg.tar.zst packages.
     <div align="center">
 2. Download and install packages.
         <div align="center">
