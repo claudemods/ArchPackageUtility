@@ -40,22 +40,23 @@ i will be looking at extra features for now everything is a base
 
 select a option from the menu
 
-1. Arch Package Utility v1.0 28-01-2025
-2. claudemods Arch Mirror Changer v1.03
-3. Exit
+1. Arch Package Utility v1.0 20-02-2025
 
-Arch Package Utility v1.0 28-01-2025:
 
-1. Download and store pkg.tar.zst
-2. Download and install packages
-3. Only store package name in log
-4. Install packages from log
-5. Update Packages And Or Clear Packages
-6. Open Logs
+Arch Package Utility v1.0 20-02-2025:
+1. Download and store .pkg.tar.zst packages.
+2. Download and install packages.
+3. Download packages from list in packages.txt.
+4. Only store package names in the log.
+5. Install packages from the log.
+6. Download and store a package, then create SquashFS.
+7. Download and store all installed packages, then create SquashFS.
+8. Open logs.
 
-![2025-01-28-103653_hyprshot](https://github.com/user-attachments/assets/4954ca1a-445a-4840-afb9-81d2340c46b6)
 
-![2025-01-27-223043_hyprshot](https://github.com/user-attachments/assets/d63cc48e-d03c-48ba-a17f-b669f28559fb)
+
+
+![Uploading 2025-02-21-024041_hyprshot.png…]()
 
 
 
