@@ -55,8 +55,8 @@ Arch Package Utility v1.0 20-02-2025:
 
 
 
+![2025-02-21-024041_hyprshot](https://github.com/user-attachments/assets/9469cd25-fa52-4f4b-ab6b-63b77fb9aac4)
 
-![Uploading 2025-02-21-024041_hyprshot.png…]()
 
 
 
