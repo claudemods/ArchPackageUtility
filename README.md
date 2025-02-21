@@ -40,7 +40,9 @@ i will be looking at extra features for now everything is a base
 select a option from the menu
 
 <div align="center">
-changelog Arch Package Utility v1.0 20-02-2025
+changelog on the releases
+    <div align="center">
+    Arch Package Utility v1.0 20-02-2025
 <div align="center">
 1. Download and store .pkg.tar.zst packages.
     <div align="center">
