@@ -4,9 +4,8 @@
 #include <sstream>
 #include <fstream>
 #include <filesystem>
-#include <cstdlib>
 #include <ctime>
-#include <algorithm>
+#include <cstdlib>
 
 namespace fs = std::filesystem;
 
@@ -44,32 +43,33 @@ std::vector<std::string> splitInput(const std::string &input, const std::string 
     return tokens;
 }
 
-// Function to execute system commands
-void executeCommand(const std::vector<std::string> &command) {
-    std::ostringstream oss;
-    for (const auto &part : command) {
-        oss << part << " ";
+// Function to execute system commands directly
+void executeCommand(const std::string &command) {
+    int result = std::system(command.c_str());
+
+    if (result != 0) {
+        std::cerr << COLOR_RED << "Error executing command: " << command << COLOR_RESET << std::endl;
     }
-    std::system(oss.str().c_str());
 }
 
 // Function to download and store .pkg.tar.zst packages
 void downloadAndStorePackage(const std::vector<std::string> &packageNames, const std::string &dateFolder) {
     for (const auto &packageName : packageNames) {
         std::string packageDir = "packages/" + dateFolder + "/" + packageName;
+
+        // Create directory for the package
         std::string createDirCommand = "mkdir -p " + packageDir;
-        if (std::system(createDirCommand.c_str()) != 0) {
-            std::cerr << COLOR_DARK_BLUE << "Error creating directory: " << packageDir << COLOR_RESET << std::endl;
-            return;
-        }
+        executeCommand(createDirCommand);
 
         std::cout << COLOR_DARK_BLUE << "Downloading package: " << packageName << COLOR_RESET << std::endl;
 
+        // Download the package
         std::string downloadCommand = "sudo pacman -Sw --noconfirm " + packageName;
-        executeCommand({"/bin/sh", "-c", downloadCommand});
+        executeCommand(downloadCommand);
 
+        // Move the downloaded package to the target directory
         std::string moveCommand = "sudo mv /var/cache/pacman/pkg/" + packageName + "-*.pkg.tar.zst " + packageDir + "/";
-        executeCommand({"/bin/sh", "-c", moveCommand});
+        executeCommand(moveCommand);
 
         std::cout << COLOR_GREEN << "Package " << packageName << " downloaded successfully to " << packageDir << COLOR_RESET << std::endl;
     }
@@ -80,36 +80,28 @@ void createSquashFSForPackage(const std::string &packageName, const std::string 
     std::string packageDir = "packages/" + dateFolder + "/" + packageName;
     std::string squashfsFile = packageDir + ".sfs";
 
-    std::vector<std::string> command = {"sudo", "mksquashfs", packageDir, squashfsFile,
-        "-comp", "xz", "-b", "1M",
-        "-no-duplicates", "-no-recovery", "-always-use-fragments",
-        "-wildcards", "-xattrs"};
-        command.push_back("-Xdict-size");
-        command.push_back("100%");
-        command.push_back("-Xbcj");
-        command.push_back("x86");
+    std::ostringstream oss;
+    oss << "sudo mksquashfs " << packageDir << " " << squashfsFile
+    << " -comp xz -b 1M -no-duplicates -no-recovery -always-use-fragments -wildcards -xattrs"
+    << " -Xdict-size 100% -Xbcj x86";
 
-        std::cout << COLOR_DARK_BLUE << "Creating SquashFS archive for " << packageName << "..." << COLOR_RESET << std::endl;
-        executeCommand(command);
-        std::cout << COLOR_GREEN << "SquashFS archive created successfully: " << squashfsFile << COLOR_RESET << std::endl;
+    std::cout << COLOR_DARK_BLUE << "Creating SquashFS archive for " << packageName << "..." << COLOR_RESET << std::endl;
+    executeCommand(oss.str());
+    std::cout << COLOR_GREEN << "SquashFS archive created successfully: " << squashfsFile << COLOR_RESET << std::endl;
 }
 
 // Function to create SquashFS for the entire packages folder
 void createSquashFSForPackagesFolder() {
     std::string squashfsFile = "packages.sfs";
 
-    std::vector<std::string> command = {"sudo", "mksquashfs", "packages", squashfsFile,
-        "-comp", "xz", "-b", "1M",
-        "-no-duplicates", "-no-recovery", "-always-use-fragments",
-        "-wildcards", "-xattrs"};
-        command.push_back("-Xdict-size");
-        command.push_back("100%");
-        command.push_back("-Xbcj");
-        command.push_back("x86");
+    std::ostringstream oss;
+    oss << "sudo mksquashfs packages " << squashfsFile
+    << " -comp xz -b 1M -no-duplicates -no-recovery -always-use-fragments -wildcards -xattrs"
+    << " -Xdict-size 100% -Xbcj x86";
 
-        std::cout << COLOR_DARK_BLUE << "Creating SquashFS archive for the 'packages' folder..." << COLOR_RESET << std::endl;
-        executeCommand(command);
-        std::cout << COLOR_GREEN << "SquashFS archive created successfully: " << squashfsFile << COLOR_RESET << std::endl;
+    std::cout << COLOR_DARK_BLUE << "Creating SquashFS archive for the 'packages' folder..." << COLOR_RESET << std::endl;
+    executeCommand(oss.str());
+    std::cout << COLOR_GREEN << "SquashFS archive created successfully: " << squashfsFile << COLOR_RESET << std::endl;
 }
 
 // Function to store package names in the log file
@@ -169,9 +161,9 @@ int main() {
     std::cout << COLOR_RED << R"(
 ░█████╗░██╗░░░░░░█████╗░██╗░░░██╗██████╗░███████╗███╗░░░███╗░█████╗░██████╗░░██████╗
 ██╔══██╗██║░░░░░██╔══██╗██║░░░██║██╔══██╗██╔════╝████╗░████║██╔══██╗██╔══██╗██╔════╝
-██║ ░░╚═╝██║░░░░░███████║██║░░░██║██║░░██║█████╗░░██╔████╔██║██║░░██║██║░░██║╚█████╗░
+██║  ░░╚═╝██║░░░░░███████║██║░░░██║██║░░██║█████╗░░██╔████╔██║██║░░██║██║░░██║╚█████╗░
 ██║░░██╗██║░░░░░██╔══██║██║░░░██║██║░░██║██╔══╝░░██║╚██╔╝██║██║░░██║██║░░██║░╚═══██╗
-╚█████╔╝█████ ██╗██║░░██║╚██████╔╝██████╔╝███████╗██║░╚═╝░██║╚█████╔╝██████╔╝██████╔╝
+╚█████╔╝████ █ ██╗██║░░██║╚██████╔╝██████╔╝███████╗██║░╚═╝░██║╚█████╔╝██████╔╝██████╔╝
 ░╚════╝░╚══════╝╚═╝░░╚═╝░╚═════╝░╚═════╝░╚══════╝╚═╝░░░░░╚═╝░╚════╝░╚════╝░╚═════╝░
 )" << COLOR_RESET << std::endl;
 
