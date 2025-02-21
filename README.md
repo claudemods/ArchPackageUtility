@@ -44,18 +44,26 @@ select a option from the menu
 
 
 Arch Package Utility v1.0 20-02-2025:
+<div align="center">
 1. Download and store .pkg.tar.zst packages.
+    <div align="center">
 2. Download and install packages.
+        <div align="center">
 3. Download packages from list in packages.txt.
+            <div align="center">
 4. Only store package names in the log.
+                <div align="center">
 5. Install packages from the log.
+                    <div align="center">
 6. Download and store a package, then create SquashFS.
+                        <div align="center">
 7. Download and store all installed packages, then create SquashFS.
+                            <div align="center">
 8. Open logs.
 
 
 
-![2025-02-21-024041_hyprshot](https://github.com/user-attachments/assets/9469cd25-fa52-4f4b-ab6b-63b77fb9aac4)
+![2025-02-21-024446_hyprshot](https://github.com/user-attachments/assets/010ea4f8-7605-4cbf-b718-daf171a7b8d9)
 
 
 
