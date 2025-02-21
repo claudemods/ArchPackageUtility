@@ -31,11 +31,10 @@
 
 
 known issues
-text at bottom of konsole
+
 
 News v1.01
 due to DeepSeek problems im having trouble updating my code for things
-i will try to fix text error
 i will be looking at extra features for now everything is a base
 
 select a option from the menu
